@@ -1,0 +1,10 @@
+# database/mongo-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+  namespace: fullstack-app
+data:
+  MONGO_INITDB_ROOT_USERNAME: admin
+  MONGO_INITDB_ROOT_PASSWORD: password
+

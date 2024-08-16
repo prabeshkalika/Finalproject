@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-config
+  namespace: fullstack-app
+data:
+  MONGODB_URI: "mongodb://mongo-service:27017/mydb"
+  PORT: "3000"
+
