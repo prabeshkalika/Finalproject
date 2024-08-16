@@ -35,19 +35,19 @@ In this project, I will deploy a full-stack application on a Kubernetes cluster,
 
 # Step3: Database Setup (MongoDB):
     - Use the official MongoDB image from Docker Hub. Configure MongoDB to use a persistent volume for data storage. Write a deployment manifest for MongoDB that uses the Persistent Volume and ConfigMap. Expose MongoDB using a ClusterIP service.
-        - kubectl apply -f mongo-deployment.yml 
-        - kubectl apply -f mongo-service.yml        
+        - kubectl apply -f mongo-deployment.yaml 
+        - kubectl apply -f mongo-service.yaml        
 
 # Step 4: Deploy Node.js Backend:
     - Setup : Write a deployment manifest for the Node.js API server. Use a ConfigMap to manage environment variables (e.g., MongoDB URI, server port). Expose the backend using a ClusterIP service.
-        - kubectl apply -f node-deployment.yml
-        - kubectl apply -f node-service.yml
+        - kubectl apply -f node-deployment.yaml
+        - kubectl apply -f node-service.yaml
 
 
 # Step 5: Nginx deployment:
     Write a deployment manifest for Nginx. Use ConfigMaps to configure Nginx, if necessary. Expose Nginx using a NodePort service.
-        - kubectl apply -f nginx-deployment.yml
-        - kubectl apply -f nginx-service.yml
+        - kubectl apply -f nginx-deployment.yaml
+        - kubectl apply -f nginx-service.yaml
     - Exposing nginx in the localhost:
         - minikube service nginx --url
 
